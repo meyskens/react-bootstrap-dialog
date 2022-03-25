@@ -1,11 +1,6 @@
 # React Bootstrap Dialog
 
-[![npm version](https://badge.fury.io/js/react-bootstrap-dialog.svg)](https://badge.fury.io/js/react-bootstrap-dialog)
-![NPM](https://img.shields.io/npm/l/react-bootstrap-dialog.svg)
-![npm](https://img.shields.io/npm/dm/react-bootstrap-dialog.svg)
-[![Build Status](https://travis-ci.org/akiroom/react-bootstrap-dialog.svg?branch=master)](https://travis-ci.org/akiroom/react-bootstrap-dialog)
-
-<span class="badge-patreon"><a href="https://patreon.com/akiroom" title="Donate to this project using Patreon"><img src="https://img.shields.io/badge/patreon-donate-yellow.svg" alt="Patreon donate button" /></a></span>
+This is a fork of [react-bootstrap-dialog](https://www.npmjs.com/package/react-bootstrap-dialog) that supports React 17 and Boostrap 5.
 
 The React component library for an **alert or dialog** based on **[react-bootstrap](https://react-bootstrap.github.io/)'s `<Modal />`**.
 Configurable and easy use instead of `window.alert`, `window.confirm`, or `window.prompt` in your React application.
@@ -24,14 +19,14 @@ Index:
 
 ## Screenshots
 
-| Default Alert | Default Dialog |
-|---------------|----------------|
-| Alternative for `window.alert` | Alternative for `window.confirm` |
+| Default Alert                                                                                                                                                         | Default Dialog                                                                                                                                                        |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Alternative for `window.alert`                                                                                                                                        | Alternative for `window.confirm`                                                                                                                                      |
 | [![https://gyazo.com/84e315aca42ac4dbe39e51ce3451bb53](https://i.gyazo.com/84e315aca42ac4dbe39e51ce3451bb53.gif)](https://gyazo.com/84e315aca42ac4dbe39e51ce3451bb53) | [![https://gyazo.com/f8e8bfd41d9c652a55ed06a0828dc57e](https://i.gyazo.com/f8e8bfd41d9c652a55ed06a0828dc57e.gif)](https://gyazo.com/f8e8bfd41d9c652a55ed06a0828dc57e) |
 
-| Text Prompt | Password Prompt |
-|--------|---------------|
-| Alternative for `window.prompt` | Easy password input |
+| Text Prompt                                                                                                                                                           | Password Prompt                                                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Alternative for `window.prompt`                                                                                                                                       | Easy password input                                                                                                                                                   |
 | [![https://gyazo.com/e621e62d17037ab0d1e40fda721ecbb2](https://i.gyazo.com/e621e62d17037ab0d1e40fda721ecbb2.gif)](https://gyazo.com/e621e62d17037ab0d1e40fda721ecbb2) | [![https://gyazo.com/b249233c97a4519f565a6885902befc3](https://i.gyazo.com/b249233c97a4519f565a6885902befc3.gif)](https://gyazo.com/b249233c97a4519f565a6885902befc3) |
 
 ## Demo and Sample
@@ -58,7 +53,7 @@ yarn add react-bootstrap-dialog
 Step 1. Import package.
 
 ```js
-import Dialog from 'react-bootstrap-dialog'
+import Dialog from "react-bootstrap-dialog";
 ```
 
 Step 2. Write jsx in `render` method.
@@ -70,36 +65,39 @@ Step 2. Write jsx in `render` method.
 Step 3. Call `showAlert` method or `show` method.
 
 ```js
-this.dialog.showAlert('Hello Dialog!')
+this.dialog.showAlert("Hello Dialog!");
 ```
 
 Full sample:
 
 ```js
-import React from 'react'
-import {Button} from 'react-bootstrap'
-import Dialog from 'react-bootstrap-dialog'
+import React from "react";
+import { Button } from "react-bootstrap";
+import Dialog from "react-bootstrap-dialog";
 
 export default class SampleCode extends React.Component {
-  constructor () {
-    super()
-    this.onClick = this.onClick.bind(this)
+  constructor() {
+    super();
+    this.onClick = this.onClick.bind(this);
   }
 
-  onClick () {
-    this.dialog.showAlert('Hello Dialog!')
+  onClick() {
+    this.dialog.showAlert("Hello Dialog!");
   }
 
-  render () {
+  render() {
     return (
       <div>
         <Button onClick={this.onClick}>Show alert</Button>
-        <Dialog ref={(component) => { this.dialog = component }} />
+        <Dialog
+          ref={(component) => {
+            this.dialog = component;
+          }}
+        />
       </div>
-    )
+    );
   }
 }
-
 ```
 
 ## Documents
@@ -110,7 +108,6 @@ Index:
 - [`<Dialog />`](#dialog-)
 - [`DialogAction` generators](#dialogaction-generators)
 - [`DialogPrompt` generators](#dialogprompt-generators)
-
 
 ### `Dialog`
 
@@ -124,15 +121,16 @@ Set default options for applying to all dialogs
   - `primaryClassName`: [String] The class name for primary button. Default is `'btn-primary'`
   - `defaultButtonClassName`: [String] The class name for ordinary button. Default is `'btn-default btn-outline-secondary'`
     - Notice: The default value includes v3 and v4 classes.
+
 ##### Example
 
 ```js
 Dialog.setOptions({
-  defaultOkLabel: 'Yes! Yes! Yes!',
-  defaultCancelLabel: 'Noooooooo!!',
-  primaryClassName: 'btn-success',
-  defaultButtonClassName: 'btn-link'
-})
+  defaultOkLabel: "Yes! Yes! Yes!",
+  defaultCancelLabel: "Noooooooo!!",
+  primaryClassName: "btn-success",
+  defaultButtonClassName: "btn-link",
+});
 ```
 
 #### resetOptions()
@@ -142,9 +140,8 @@ Reset default options to presets.
 ##### Example
 
 ```js
-Dialog.resetOptions()
+Dialog.resetOptions();
 ```
-
 
 ### `<Dialog />`
 
@@ -153,31 +150,28 @@ Dialog.resetOptions()
 Show dialog with choices. This is similar to `window.confirm`.
 
 - `options`: [Object] The parameters for options.
-   - `title`: [String, Node] The title of dialog.
-   - `body`: [String, Node] The body of message.
-   - `actions`: [Array[DialogAction]] The choices for presenting to user. See [DialogAction generators](#dialogaction-generators).
-   - `bsSize`: [String] The width size for dialog.
-     - with react-bootstrap v3: You can choose from [null, 'medium', 'large', 'small'].
-     - with react-bootstrap v4: You can choose from [null, 'medium', 'lg', 'sm'].
-   - `onHide`: [Function] The method to call when the dialog was closed by clicking background.
-   - `prompt`: [DialogPrompt] The prompt to get user input. See [DialogPrompt generators](#dialogprompt-generators).
+  - `title`: [String, Node] The title of dialog.
+  - `body`: [String, Node] The body of message.
+  - `actions`: [Array[DialogAction]] The choices for presenting to user. See [DialogAction generators](#dialogaction-generators).
+  - `bsSize`: [String] The width size for dialog.
+    - with react-bootstrap v3: You can choose from [null, 'medium', 'large', 'small'].
+    - with react-bootstrap v4: You can choose from [null, 'medium', 'lg', 'sm'].
+  - `onHide`: [Function] The method to call when the dialog was closed by clicking background.
+  - `prompt`: [DialogPrompt] The prompt to get user input. See [DialogPrompt generators](#dialogprompt-generators).
 
 ##### Example
 
 ```js
 this.dialog.show({
-  title: 'Greedings',
-  body: 'How are you?',
-  actions: [
-    Dialog.CancelAction(),
-    Dialog.OKAction()
-  ],
-  bsSize: 'small',
+  title: "Greedings",
+  body: "How are you?",
+  actions: [Dialog.CancelAction(), Dialog.OKAction()],
+  bsSize: "small",
   onHide: (dialog) => {
-    dialog.hide()
-    console.log('closed by clicking background.')
-  }
-})
+    dialog.hide();
+    console.log("closed by clicking background.");
+  },
+});
 ```
 
 #### showAlert(body, bsSize = undefined)
@@ -190,7 +184,7 @@ Show message dialog This is similar to `window.alert`.
 ##### Example
 
 ```js
-this.dialog.showAlert('Hello world!')
+this.dialog.showAlert("Hello world!");
 ```
 
 #### hide()
@@ -200,9 +194,8 @@ Hide this dialog.
 ##### Example
 
 ```js
-this.dialog.hide()
+this.dialog.hide();
 ```
-
 
 ### `DialogAction` generators
 
@@ -217,11 +210,7 @@ The customized choice for `options.actions` in `dialog.show`.
 ##### Example
 
 ```js
-Dialog.Action(
-  'Hello',
-  () => console.log('Hello!'),
-  'btn-info'
-)
+Dialog.Action("Hello", () => console.log("Hello!"), "btn-info");
 ```
 
 #### Dialog.DefaultAction(label, func, className)
@@ -236,12 +225,12 @@ The default choice for `options.actions` in `dialog.show`.
 
 ```js
 Dialog.DefaultAction(
-  'Remove',
+  "Remove",
   () => {
-    console.log('Remove action will be executed!')
+    console.log("Remove action will be executed!");
   },
-  'btn-danger'
-)
+  "btn-danger"
+);
 ```
 
 #### Dialog.OKAction(func)
@@ -255,8 +244,8 @@ It uses default ok label (`'OK'`) and default primary class (`'btn-primary'`).
 
 ```js
 Dialog.OKAction(() => {
-  console.log('OK was clicked!')
-})
+  console.log("OK was clicked!");
+});
 ```
 
 #### Dialog.CancelAction(func)
@@ -270,17 +259,16 @@ It uses default cancel label (`'Cancel'`).
 
 ```js
 Dialog.CancelAction(() => {
-  console.log('Cancel was clicked!')
-})
+  console.log("Cancel was clicked!");
+});
 ```
 
 ##### Example 2
 
 ```js
 // Do nothing.
-Dialog.CancelAction()
+Dialog.CancelAction();
 ```
-
 
 ### `DialogPrompt` generators
 
@@ -289,18 +277,21 @@ Dialog.CancelAction()
 The prompt settings to show text input for `options.prompt` in `dialog.show`.
 
 - `options`: [Object] The parameters for options.
-   - `initialValue`: [String] The initial value for the prompt.
-   - `placeholder`: [String] The placeholder for the prompt.
-   - `required`: [Boolean] If true, prevent to close dialog without input text value.
+  - `initialValue`: [String] The initial value for the prompt.
+  - `placeholder`: [String] The placeholder for the prompt.
+  - `required`: [Boolean] If true, prevent to close dialog without input text value.
 
 ##### Example
 
 ```js
-Dialog.TextPrompt()
+Dialog.TextPrompt();
 
 // or
 
-Dialog.TextPrompt({initialValue: 'me@example.com', placeholder: 'your email'})
+Dialog.TextPrompt({
+  initialValue: "me@example.com",
+  placeholder: "your email",
+});
 ```
 
 #### Dialog.PasswordPrompt(options = {})
@@ -308,16 +299,19 @@ Dialog.TextPrompt({initialValue: 'me@example.com', placeholder: 'your email'})
 The prompt settings to show password input for `options.prompt` in `dialog.show`.
 
 - `options`: [Object] The parameters for options.
-   - `initialValue`: [String] The initial value for the prompt.
-   - `placeholder`: [String] The placeholder for the prompt.
-   - `required`: [Boolean] If true, prevent to close dialog without input password value.
+  - `initialValue`: [String] The initial value for the prompt.
+  - `placeholder`: [String] The placeholder for the prompt.
+  - `required`: [Boolean] If true, prevent to close dialog without input password value.
 
 ##### Example
 
 ```js
-Dialog.PasswordPrompt()
+Dialog.PasswordPrompt();
 
 // or
 
-Dialog.PasswordPrompt({initialValue: 'previous~pa$sw0rd', placeholder: 'your password'})
+Dialog.PasswordPrompt({
+  initialValue: "previous~pa$sw0rd",
+  placeholder: "your password",
+});
 ```
