@@ -1290,32 +1290,22 @@
     react-addons-create-fragment "^15.5.3"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-links@^5.1.9":
-  version "5.3.21"
-  resolved "https://registry.npmjs.org/@storybook/addon-links/-/addon-links-5.3.21.tgz"
+"@storybook/addon-links@^6.4.19":
+  version "6.4.19"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-6.4.19.tgz#001f26c4ffc7d36fd6018b8a137449948b337869"
   dependencies:
-    "@storybook/addons" "5.3.21"
-    "@storybook/client-logger" "5.3.21"
-    "@storybook/core-events" "5.3.21"
-    "@storybook/csf" "0.0.1"
-    "@storybook/router" "5.3.21"
-    core-js "^3.0.1"
-    global "^4.3.2"
+    "@storybook/addons" "6.4.19"
+    "@storybook/client-logger" "6.4.19"
+    "@storybook/core-events" "6.4.19"
+    "@storybook/csf" "0.0.2--canary.87bc651.0"
+    "@storybook/router" "6.4.19"
+    "@types/qs" "^6.9.5"
+    core-js "^3.8.2"
+    global "^4.4.0"
     prop-types "^15.7.2"
-    qs "^6.6.0"
-    ts-dedent "^1.1.0"
-
-"@storybook/addons@5.3.21":
-  version "5.3.21"
-  resolved "https://registry.npmjs.org/@storybook/addons/-/addons-5.3.21.tgz"
-  dependencies:
-    "@storybook/api" "5.3.21"
-    "@storybook/channels" "5.3.21"
-    "@storybook/client-logger" "5.3.21"
-    "@storybook/core-events" "5.3.21"
-    core-js "^3.0.1"
-    global "^4.3.2"
-    util-deprecate "^1.0.2"
+    qs "^6.10.0"
+    regenerator-runtime "^0.13.7"
+    ts-dedent "^2.0.0"
 
 "@storybook/addons@6.4.19":
   version "6.4.19"
@@ -1343,31 +1333,6 @@
     "@storybook/core-events" "5.3.22"
     core-js "^3.0.1"
     global "^4.3.2"
-    util-deprecate "^1.0.2"
-
-"@storybook/api@5.3.21":
-  version "5.3.21"
-  resolved "https://registry.npmjs.org/@storybook/api/-/api-5.3.21.tgz"
-  dependencies:
-    "@reach/router" "^1.2.1"
-    "@storybook/channels" "5.3.21"
-    "@storybook/client-logger" "5.3.21"
-    "@storybook/core-events" "5.3.21"
-    "@storybook/csf" "0.0.1"
-    "@storybook/router" "5.3.21"
-    "@storybook/theming" "5.3.21"
-    "@types/reach__router" "^1.2.3"
-    core-js "^3.0.1"
-    fast-deep-equal "^2.0.1"
-    global "^4.3.2"
-    lodash "^4.17.15"
-    memoizerific "^1.11.3"
-    prop-types "^15.6.2"
-    react "^16.8.3"
-    semver "^6.0.0"
-    shallow-equal "^1.1.0"
-    store2 "^2.7.1"
-    telejson "^3.2.0"
     util-deprecate "^1.0.2"
 
 "@storybook/api@5.3.22":
@@ -1513,12 +1478,6 @@
     global "^4.4.0"
     telejson "^5.3.2"
 
-"@storybook/channels@5.3.21":
-  version "5.3.21"
-  resolved "https://registry.npmjs.org/@storybook/channels/-/channels-5.3.21.tgz"
-  dependencies:
-    core-js "^3.0.1"
-
 "@storybook/channels@5.3.22":
   version "5.3.22"
   resolved "https://registry.npmjs.org/@storybook/channels/-/channels-5.3.22.tgz"
@@ -1561,12 +1520,6 @@
 "@storybook/client-logger@3.4.12":
   version "3.4.12"
   resolved "https://registry.npmjs.org/@storybook/client-logger/-/client-logger-3.4.12.tgz"
-
-"@storybook/client-logger@5.3.21":
-  version "5.3.21"
-  resolved "https://registry.npmjs.org/@storybook/client-logger/-/client-logger-5.3.21.tgz"
-  dependencies:
-    core-js "^3.0.1"
 
 "@storybook/client-logger@5.3.22":
   version "5.3.22"
@@ -1696,12 +1649,6 @@
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
     webpack "4"
-
-"@storybook/core-events@5.3.21":
-  version "5.3.21"
-  resolved "https://registry.npmjs.org/@storybook/core-events/-/core-events-5.3.21.tgz"
-  dependencies:
-    core-js "^3.0.1"
 
 "@storybook/core-events@5.3.22":
   version "5.3.22"
@@ -1916,20 +1863,6 @@
     ts-dedent "^2.0.0"
     webpack "4"
 
-"@storybook/router@5.3.21":
-  version "5.3.21"
-  resolved "https://registry.npmjs.org/@storybook/router/-/router-5.3.21.tgz"
-  dependencies:
-    "@reach/router" "^1.2.1"
-    "@storybook/csf" "0.0.1"
-    "@types/reach__router" "^1.2.3"
-    core-js "^3.0.1"
-    global "^4.3.2"
-    lodash "^4.17.15"
-    memoizerific "^1.11.3"
-    qs "^6.6.0"
-    util-deprecate "^1.0.2"
-
 "@storybook/router@5.3.22":
   version "5.3.22"
   resolved "https://registry.npmjs.org/@storybook/router/-/router-5.3.22.tgz"
@@ -1986,23 +1919,6 @@
     synchronous-promise "^2.0.15"
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
-
-"@storybook/theming@5.3.21":
-  version "5.3.21"
-  resolved "https://registry.npmjs.org/@storybook/theming/-/theming-5.3.21.tgz"
-  dependencies:
-    "@emotion/core" "^10.0.20"
-    "@emotion/styled" "^10.0.17"
-    "@storybook/client-logger" "5.3.21"
-    core-js "^3.0.1"
-    deep-object-diff "^1.1.0"
-    emotion-theming "^10.0.19"
-    global "^4.3.2"
-    memoizerific "^1.11.3"
-    polished "^3.3.1"
-    prop-types "^15.7.2"
-    resolve-from "^5.0.0"
-    ts-dedent "^1.1.0"
 
 "@storybook/theming@5.3.22":
   version "5.3.22"
