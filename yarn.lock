@@ -1230,15 +1230,15 @@
   dependencies:
     "@babel/runtime" "^7.6.2"
 
-"@restart/hooks@^0.4.0", "@restart/hooks@^0.4.5":
-  version "0.4.5"
-  resolved "https://registry.npmjs.org/@restart/hooks/-/hooks-0.4.5.tgz"
+"@restart/hooks@^0.4.0", "@restart/hooks@^0.4.6":
+  version "0.4.6"
+  resolved "https://registry.yarnpkg.com/@restart/hooks/-/hooks-0.4.6.tgz#15dcf34631a618c513efc924705c7cbe349a4a0c"
   dependencies:
     dequal "^2.0.2"
 
-"@restart/ui@^1.0.2":
-  version "1.1.0"
-  resolved "https://registry.npmjs.org/@restart/ui/-/ui-1.1.0.tgz"
+"@restart/ui@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@restart/ui/-/ui-1.2.0.tgz#fb90251aa25f99b41ccedc78a91d2a15f3c5e0fb"
   dependencies:
     "@babel/runtime" "^7.13.16"
     "@popperjs/core" "^2.10.1"
@@ -1247,7 +1247,6 @@
     "@types/warning" "^3.0.0"
     dequal "^2.0.2"
     dom-helpers "^5.2.0"
-    prop-types "^15.7.2"
     uncontrollable "^7.2.1"
     warning "^4.0.3"
 
@@ -7090,12 +7089,12 @@ react-addons-create-fragment@^15.5.3:
     object-assign "^4.1.0"
 
 react-bootstrap@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.npmjs.org/react-bootstrap/-/react-bootstrap-2.2.1.tgz"
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/react-bootstrap/-/react-bootstrap-2.2.3.tgz#1c563018c8b856071334dd5a35f25507185136e2"
   dependencies:
     "@babel/runtime" "^7.17.2"
-    "@restart/hooks" "^0.4.5"
-    "@restart/ui" "^1.0.2"
+    "@restart/hooks" "^0.4.6"
+    "@restart/ui" "^1.2.0"
     "@types/invariant" "^2.2.35"
     "@types/prop-types" "^15.7.4"
     "@types/react" ">=16.14.8"
