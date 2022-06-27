@@ -4843,7 +4843,20 @@ git-up@^2.0.0:
     is-ssh "^1.3.0"
     parse-url "^3.0.2"
 
-git-url-parse@^6.0.1, git-url-parse@^6.0.2:
+git-up@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/git-up/-/git-up-6.0.0.tgz#dbd6e4eee270338be847a0601e6d0763c90b74db"
+  dependencies:
+    is-ssh "^1.4.0"
+    parse-url "^7.0.2"
+
+git-url-parse@^12.0.0:
+  version "12.0.0"
+  resolved "https://registry.yarnpkg.com/git-url-parse/-/git-url-parse-12.0.0.tgz#4ba70bc1e99138321c57e3765aaf7428e5abb793"
+  dependencies:
+    git-up "^6.0.0"
+
+git-url-parse@^6.0.2:
   version "6.2.2"
   resolved "https://registry.npmjs.org/git-url-parse/-/git-url-parse-6.2.2.tgz"
   dependencies:
@@ -5574,6 +5587,12 @@ is-ssh@^1.3.0:
   resolved "https://registry.npmjs.org/is-ssh/-/is-ssh-1.3.3.tgz"
   dependencies:
     protocols "^1.1.0"
+
+is-ssh@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/is-ssh/-/is-ssh-1.4.0.tgz#4f8220601d2839d8fa624b3106f8e8884f01b8b2"
+  dependencies:
+    protocols "^2.0.1"
 
 is-stream@^1.0.1:
   version "1.1.0"
@@ -6363,6 +6382,10 @@ normalize-url@^1.9.1:
     query-string "^4.1.0"
     sort-keys "^1.0.0"
 
+normalize-url@^6.1.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-6.1.0.tgz#40d0885b535deffe3f3147bec877d05fe4c5668a"
+
 npmlog@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/npmlog/-/npmlog-5.0.1.tgz#f06678e80e29419ad67ab964e0fa69959c1eb8b0"
@@ -6648,6 +6671,12 @@ parse-path@^3.0.1:
     is-ssh "^1.3.0"
     protocols "^1.4.0"
 
+parse-path@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/parse-path/-/parse-path-5.0.0.tgz#f933152f3c6d34f4cf36cfc3d07b138ac113649d"
+  dependencies:
+    protocols "^2.0.0"
+
 parse-url@^3.0.2:
   version "3.0.2"
   resolved "https://registry.npmjs.org/parse-url/-/parse-url-3.0.2.tgz"
@@ -6656,6 +6685,15 @@ parse-url@^3.0.2:
     normalize-url "^1.9.1"
     parse-path "^3.0.1"
     protocols "^1.4.0"
+
+parse-url@^7.0.2:
+  version "7.0.2"
+  resolved "https://registry.yarnpkg.com/parse-url/-/parse-url-7.0.2.tgz#d21232417199b8d371c6aec0cedf1406fd6393f0"
+  dependencies:
+    is-ssh "^1.4.0"
+    normalize-url "^6.1.0"
+    parse-path "^5.0.0"
+    protocols "^2.0.1"
 
 parse5@^6.0.0:
   version "6.0.1"
@@ -6954,6 +6992,10 @@ property-information@^5.0.0, property-information@^5.3.0:
 protocols@^1.1.0, protocols@^1.4.0:
   version "1.4.8"
   resolved "https://registry.npmjs.org/protocols/-/protocols-1.4.8.tgz"
+
+protocols@^2.0.0, protocols@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/protocols/-/protocols-2.0.1.tgz#8f155da3fc0f32644e83c5782c8e8212ccf70a86"
 
 proxy-addr@~2.0.7:
   version "2.0.7"
